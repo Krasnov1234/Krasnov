@@ -25,11 +25,29 @@ namespace Краснов_экзамен
         public MainWindow()
         {
             InitializeComponent();
-            Number.SelectedItem = db.places.ToList();
+            Number.ItemsSource = db.places.ToList();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            bu.Name = Name.Text;
+            bu.Surname = Surname.Text;
+            bu.Midlname = Midlname.Text;
+            bu.number = Convert.ToInt32( Number.Text);
+            if(Number.Text==bu.number.ToString())
+            {
+                MessageBox.Show("Место занято выберете другое");
+                
+            }
+            else
+            {
+                MessageBox.Show("Место выбрано");
+
+                db.buyer.Add(bu);
+                db.SaveChanges();
+
+            }
+
 
         }
     }
