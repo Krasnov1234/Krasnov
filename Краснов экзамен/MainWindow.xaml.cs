@@ -34,18 +34,15 @@ namespace Краснов_экзамен
             bu.Surname = Surname.Text;
             bu.Midlname = Midlname.Text;
             bu.number = Convert.ToInt32( Number.Text);
-            if(Number.Text==bu.number.ToString())
+            if(db.buyer.Select(i=>i.number.ToString()).Contains(Number.Text))
             {
                 MessageBox.Show("Место занято выберете другое");
-                
             }
-            else
+            else 
             {
                 MessageBox.Show("Место выбрано");
-
                 db.buyer.Add(bu);
                 db.SaveChanges();
-
             }
 
 
