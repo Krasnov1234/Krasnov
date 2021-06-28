@@ -20,9 +20,17 @@ namespace Краснов_экзамен
     /// </summary>
     public partial class MainWindow : Window
     {
+        КинотеатрEntities db = new КинотеатрEntities();
+        buyer bu = new buyer();
         public MainWindow()
         {
             InitializeComponent();
+            Number.SelectedItem = db.places.ToList();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

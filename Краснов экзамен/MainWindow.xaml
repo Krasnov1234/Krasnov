@@ -5,8 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Краснов_экзамен"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="390.789" Width="351.692">
     <Grid>
-        
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF00B230" Offset="0"/>
+                <GradientStop Color="#FF5B60BD" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <TextBox x:Name="Name" HorizontalAlignment="Left" Height="23" Margin="68,92,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="Surname" HorizontalAlignment="Left" Height="23" Margin="68,137,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="Midlname" HorizontalAlignment="Left" Height="23" Margin="68,182,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="Number" HorizontalAlignment="Left" DisplayMemberPath="Number" Margin="68,267,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="Pfone" HorizontalAlignment="Left" Height="23" Margin="68,224,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <Button Content="Бронировать" HorizontalAlignment="Left" Margin="224,167,0,0" VerticalAlignment="Top" Width="89" Height="38" Click="Button_Click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="116,71,0,0" TextWrapping="Wrap" Text="Имя" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="105,120,0,0" TextWrapping="Wrap" Text="Фамилия" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="105,165,0,0" TextWrapping="Wrap" Text="Отчество" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="83,203,0,0" TextWrapping="Wrap" Text="Номер телефона" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="116,252,0,0" TextWrapping="Wrap" Text="Место" VerticalAlignment="Top"/>
+
     </Grid>
 </Window>
